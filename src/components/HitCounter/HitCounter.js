@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   readFile,
   writeFile,
@@ -28,9 +26,7 @@ function HitCounter() {
   hits += 1;
   writeFile(DATABASE_PATH, JSON.stringify({hits}));
 
-  return (
-    <button className='censored'>{hits}</button>
-  );
+  return hits;
 }
 
 export default HitCounter;
